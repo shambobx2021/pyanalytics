@@ -2,7 +2,7 @@
 #-----------------------------
 #Data Structures
 #List - ordered collection of items, mutable : [square ]
-list1 = [1,2,3,4,5,'a','Dhiraj',"Upadhyaya",True]  #list type of object with data
+list1 = [1,2,3,4,5,'a','Shambo',"Bhattacharya",True]  #list type of object with data #Edited
 list1  #print when through spyder
 type(list1)  #type of object
 print(list1)  #print when running complete file
@@ -58,10 +58,11 @@ print(set2)
 #strings as text in string; imutable
 str1 = 'Python Programming'
 type(str1)
-len(str1) #Not in original code, added by Shambo
+len(str1) #Not in original code, added by Shambo on 19-07-2020
 print(str1)
 str2="Yash"
 str2.lower()
+type(str) #Not in original code, added by Shambo on 19-07-2020
 #dict?
 dir(str)
 #%% - Sequence
@@ -72,7 +73,12 @@ for i in list1:
     print(i)
   
 for i in list1:    print(i)
-for i in list1:    print('Dhiraj ', i + 6)
+list2=[1,2,3,4] #Added
+for i in list2:    print('Shambo ', i + 6) #Edited
+
+list3 = ['Parantap', 'Wasiq', 'Pranav'] #Added
+for i in list3: #Added
+    print(i) #Added
 
 tuple1
 list5 = ['a',1]
@@ -121,8 +127,21 @@ import numpy as np #np is alias
 np1 = np.arange(1,10)
 x=np.arange(start=1,stop=1000000,step=2)
 len(x)
+print(x) #Added
+x
+type(x) #Added
+dir(np)
+
+np2 = np.arange(50,99) #Added
+print(np2) #Added
+
 x[1:100]
-x[1:50:10]
+x[50:0:-10]
+x.shape #Added
+
+x1=np.arange(start=1000, stop = 0, step = -2) #Added
+x1 #Added
+
 np
 np.mean(np.arange(1,10000000))
 np1
@@ -184,6 +203,9 @@ import statsmodels.api as sm
 #https://vincentarelbundock.github.io/Rdatasets/datasets.html
 mtcars = sm.datasets.get_rdataset(dataname='mtcars', package= 'datasets')
 mtcars.data.head()
+mtcars.data.tail()
+mtcars.columns()
+mtcars.data.columns #Added
 
 #%%
 #Load from Excel/ CSV and export to
@@ -191,7 +213,7 @@ data = mtcars.data
 data.head(6)
 type(data)
 data.to_csv('mtcars.csv')
-data.to_excel('mtcarsExcel.xlsx','sheet3', header=False)
+data.to_excel('mtcarsExcel.xlsx','sheet3', header=True)
 
 #writing to multiple sheets
 writer = pd.ExcelWriter('test.xlsx', engine='xlsxwriter')
@@ -207,8 +229,7 @@ data.to_excel?
 data2a
 data2a = pd.read_csv('mtcars.csv') #when csv is in project folder
 data2a
-data2b
-data2b = pd.read_csv('E:/pywork/pyprojects/duanalytics/pyanalytics/mtcars.csv')
+data2b = pd.read_csv('G:/OneDrive/MBA/IIM-C/Academics/CPBA/Analytics/Projects/pyanalytics/mtcars.csv') #Edited
 data2b
 #csv in any other location - full path
 data2b
