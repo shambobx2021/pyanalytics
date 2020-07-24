@@ -176,6 +176,11 @@ df1.shape  # rows and columns
 df1.groupby('gender').size()
 df1.groupby('gender')['marks'].mean()
 df1.groupby('gender').aggregate({'marks': [np.mean, 'max','min','std','count']})
+df1.groupby('gender').aggregate({'marks': [np.mean, 'count']})
+df1.sort_values(by ='gender', ascending = 0) 
+df1
+
+
 
 #%%
 #Graphs https://python-graph-gallery.com/
