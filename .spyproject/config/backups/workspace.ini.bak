@@ -6,5 +6,5 @@ save_non_project_files = False
 
 [main]
 version = 0.2.0
-recent_files = ['ST3_outliers.py']
+recent_files = ['ST4_missingValues.py', 'TM01_tweets.py']
 
